@@ -1,8 +1,14 @@
 package com.knoldus;
 
-import java.util.function.Function;
-
 public class UpperCaseAndNoSpaces {
+
+    public String concatenateString(String... words){
+        StringBuilder stringBuilder=new StringBuilder();
+        for (String arguments:words){
+            stringBuilder.append(arguments+" ");
+        }
+        return removeSpaces(stringBuilder.toString());
+    }
 
     public int countWords(String string){
         if(string==null || string.isEmpty())
